@@ -1,1 +1,9 @@
-body {background-color: coral;}
+:root {
+    --bg1 : #243f8f;
+    --bg2 : #192c64;
+    --text1 : #bdc5dd;
+    --text2 :#e9ebf3;
+    --text3 : #ffffff;
+}
+
+body {background-color: var(--bg1);}
