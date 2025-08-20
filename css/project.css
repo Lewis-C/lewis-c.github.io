@@ -1,0 +1,205 @@
+/*--
+Colour Variables
+--*/
+:root {
+    --sidebar-background-colour: #69995D;
+    --sidebar-accent-colour : #B1C7AE;
+    --sidebar-text-colour : #F9F5FF;
+    --background-accent-colour : #EEE5E9 ;
+    --text-colour : #020202;
+    --sub-text-colour: #66666E;
+}
+
+/*
+Overall Styling
+*/
+html, body, div, span, applet, object,ki
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    border-style: solid;
+}
+
+body {
+    color: var(--text_colour);
+    font-family: Roboto, Verdana, Geneva, Tahoma, serif;
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*
+Header Styling
+*/
+
+#header {
+    background-color: var(--sidebar-background-colour);
+    height: 10vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    position: fixed;
+    overflow: hidden;
+
+}
+
+#project-title {
+    background-color: var(--sidebar-background-colour);
+    padding: 0.5vw;
+    color: var(--sidebar-text-colour);
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: auto;
+    flex: 4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#contact {
+    flex: 1;
+    justify-content: flex-start;
+    border-left: 1px solid var(--sidebar-accent-colour);
+
+    margin: auto;
+}
+
+.contact-link {
+    flex-basis: 100%;
+    text-align: right;
+}
+
+.contact-icon {
+    filter: brightness(0) saturate(100%) invert(81%) sepia(0%) saturate(7333%) hue-rotate(187deg) brightness(114%) contrast(120%);
+    width: 50%;
+}
+
+/*
+Body Styling
+*/
+#body {
+    padding-left: 15vw;
+    padding-right: 15vw;
+    margin-top: 10vh;
+}
+
+.project-skills{
+    white-space: nowrap;
+    overflow: hidden;
+    flex-wrap: wrap;
+    gap: 0.3vw;
+    margin: 0.3vw;
+    justify-content: flex-start;
+    padding: 0.5vw;
+    flex: 10;
+}
+
+.project-skill {
+    flex: 0 0 15%;
+    padding: 0.2vh;
+    padding-left: 0.3vw;
+    padding-right: 0.3vw;
+    border-radius: 10px;
+    border: 3px solid var(--sidebar-accent-colour);
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+.project-date {
+    margin-top: 1vh;
+    margin-right: 0.4vw;
+    color: var(--sub-text-colour);
+    font-size: 1.2rem;
+    flex: 1;
+    padding-bottom: 0;
+    text-align: right;
+}
+
+
+.project-header {
+    padding: 0.5vw;
+    color: var(--sidebar-background-colour);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: auto;
+    flex: 5;
+    padding-bottom: 0;
+}
+
+.project-text {
+    padding: 0.5vw;
+    padding-top: 0;
+}
+
+.project-image {
+    border-radius: 5px;
+    border: 2px solid var(--sidebar-accent-colour);
+    object-fit: cover;
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+}
+
+/**
+Sizing Rules
+**/
+/**
+Smaller Screens
+**/
+@media only screen and (max-width: 1150px) {
+    #header {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    #body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    .contact-link {
+        flex-basis: 50%;
+        text-align: right;
+    }
+    
+    .contact-icon {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact {
+        flex-wrap: wrap;
+    }
+}
+

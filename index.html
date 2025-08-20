@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Lewis Cunliffe - Profile</title>
+    <title>Lewis Cunliffe | Data Engineer</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/TabLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+    <body>
+        <div id="sidebar">
+            <div id="info" class="column">
+                <div>
+                    <div class="row">
+                        <img id="profile-picture" alt="Picture of me" src="https://media.licdn.com/dms/image/v2/C4E03AQENdxlVRMpL5Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1621956712127?e=1757548800&v=beta&t=svvKeRmyOTQ4CweHI4M_jUiKlKENbZMFG3oXE3_chuo">
+                        <div id="profile-header" class="column">
+                            <h1 id="profile-intro">Hi, I'm</h1>
+                            <h1 id="profile-name">Lewis Cunliffe </h1>
+                        </div>
+                    </div>
+                    <p id="profile-description">
+                        I'm currently a Data Engineer at BAE Systems with years of experience in creating data solutions. During my time, I've worked on all aspects of the data process, extracting data from a wide range of sources all the way to creating appealing visualisations. 
+                        <br><br>
+                        In my spare time, I often work on a variety of personal technical projects that cover all sorts of skills (though primarily data related). I've created this website to showcase them. Please feel free to have a look around and reach out to me if you have any questions!
+                        <br><br>
+                        <span id="skills-instructions">
+                        Select a skill below to focus on projects that cover them. Some skills dont have a project to showcase them as I've picked them up elsewhere.
+                        </span>
+                    </p>
+                    <div class="row skills">
+                        <label class="skill">
+                            <input class="skill-check" id="webdesign" type="checkbox"/>
+                            <span class="skill-text">Web Design</span>
+                        </label>
+                        <label class="skill">
+                            <input class="skill-check" id="javascript" type="checkbox"/>
+                            <span class="skill-text">Javascript</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="contact" class="row">
+                    <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
+                    <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
+                    <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
+                </div>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+            </div>
+        </div>
+        <div id="main">     
+            <div id="projects" class="row">
+                <div class="column project webdesign javascript">
+                    <div class="column project-body">
+                        <h1 class="project-title">This Website</h1>
+                        <p class="project-description">The site you're on now! After putting a handful of projects together, I wanted a place to write about my process and made this site. </p>
+                        <div class="row project-skills">
+                            <span class="project-skill">Web Design</span>
+                            <span class="project-skill">Javascript</span>
+                        </div>
+                    </div>
+                    <div class="row project-footer">
+                        <p class="project-date">Ongoing</p>
+                        <a href="website.html" class="project-link">Read More...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</body>
+        <script src="js/skills_highlight.js"></script> 
+    </body>
+
 </html> 
