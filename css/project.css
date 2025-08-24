@@ -189,6 +189,12 @@ Body Styling
     color: var(--sidebar-text-colour);
 }
 
+.project-list {
+    margin-left: 2vw;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
 
 /**
 Sizing Rules
