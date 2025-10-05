@@ -80,7 +80,7 @@ Sidebar Styling
 #profile-picture {
     border-radius: 100%;
     border: 2px solid var(--sidebar-accent-colour);
-    width: 4vw;
+    width: 2.75vw;
     object-fit: cover
 }
 
