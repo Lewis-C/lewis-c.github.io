@@ -171,6 +171,10 @@ Body Styling
     margin-top: 1vh;
 }
 
+.project-erd {
+    width: 70%;
+}
+
 .project-link {
     float: right;
     background-color: var(--background-colour); 

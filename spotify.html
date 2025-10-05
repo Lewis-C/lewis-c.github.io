@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lewis Cunliffe | Music ETL</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="icon" href="img/TabLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body class="column">
+        <div id="header" class="row">
+            <h1 id="project-title">Music ETL / Dashboard</h1>
+            <div id="contact" class="row">
+                <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
+                <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
+                <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
+                <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
+            </div>
+        </div>
+        <div id="body">
+            <div class="row">
+                <div class="row project-skills">
+                    <span class="project-skill">SQL</span>
+                    <span class="project-skill">PowerBI</span>
+                    <span class="project-skill">Python</span>
+                </div>
+                <h1 class="project-date">August 2025</h1>
+            </div>
+            <h1 class="project-header">What is it?</h1>
+            <p  class="project-text">
+                A Python script that connects to my Spotify account using the API and retrieves the playlists I've made, as well as details about the tracks and artists within them. The script then inserts said data into a SQLite database in a star schema. 
+                <br><br>
+                Originally, this was used to create a view of the albums that I had most commonly added to playlists and figure out which records I should add to my collection but as I expanded the data, I thought I should make a proper display. To do this I created a dashboard in PowerBI. I had extensive experience in Tableau from work, but never used PowerBI before so this was a learning oppurtunity for myself. 
+            </p>
+            <h1 class="project-header">How does it work?</h1>
+            <p class="project-text">
+                Using Python and the library Spotipy, the script returns extracts of my own Spotify library, taking data from it's playlists, artists, albums and songs. The script then transforms the data into a star schema (as shown in the ERD below) with each track acting as a fact record joining between each element. As this project was initially intended to find the albums that I most listened to, I created a view to extract this info with a calculation included to find the percentage of tracks added to playlists vs the total tracks on the albums.
+                <br>
+                <img class="project-image project-erd" alt="Project Image" src="img/project_images/spotifyErd.png">
+                <br>
+                Once this database structure had been made, I created a PowerBI dashboard to display the values from the database in a more readable format. This gave an overview of the Playlists, Artists and Albums.
+                <div class="row">
+                    <img class="project-image" alt="Project Image" src="img/project_images/spotify1.png">
+                    <img class="project-image" alt="Project Image" src="img/project_images/spotify2.png">
+                    <img class="project-image" alt="Project Image" src="img/project_images/spotify3.png">
+                </div>
+
+            </p>
+
+            <a href="https://github.com/Lewis-C/Spotify_Data_Extract" class="project-link">Visit Github Repo...</a>
+
+
+        </div>
+    </body>
+</html> 
