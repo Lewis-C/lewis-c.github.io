@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lewis Cunliffe | Dissertation</title>
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="icon" href="img/TabLogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body class="column">
+        <div id="header" class="row">
+            <h1 id="project-title">Chatbot Dissertation</h1>
+            <div id="contact" class="row">
+                <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
+                <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
+                <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
+                <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
+            </div>
+        </div>
+        <div id="body">
+            <div class="row">
+                <div class="row project-skills">
+                    <span class="project-skill">Python</span>
+                    <span class="project-skill">Tensorflow</span>
+                    <span class="project-skill">DeepLearning</span>
+                </div>
+                <h1 class="project-date">May 2021</h1>
+            </div>
+            <h1 class="project-header">What is it?</h1>
+            <p  class="project-text">
+                For my dissertation I created a chatbot tool, inteded to act as an informative and emotional support tool for fellow students specific to my university. The dissertation covered the planning, design and research needed to justify and create the tool itself then the development process using Tensorflow's Keras Seq2Seq Deeplearning model to create the chatbot itself. The chatbot then was hosted temporarily on Facebook messenger for use. Despite the challenges I faced with data quality causing the chatbot, my dissertation was awarded a First Class Honours and featured as part of the university end of year showcase awards for 2021. The dissertation itself can be read via the button below but as it is over 150 pages long, i've also summarised the project below.
+            </p>
+            
+            <div class="row project-chatbot">
+                <img class="project-image" alt="Project Image" src="img/project_images/chatbot1.png">
+                <img class="project-image" alt="Project Image" src="img/project_images/chatbot2.png">
+                <img class="project-image" alt="Project Image" src="img/project_images/chatbot3.png">
+                
+            </div>
+            <a href="https://github.com/Lewis-C/EHU-Chatbot-Dissertation-Script/blob/main/Project%20Report.pdf" class="project-link">Read the full Dissertation...</a>
+            <br><br>
+            <h1 class="project-header">Motivation, Planning and Design</h1>
+            <p class="project-text">
+                I chose to create a chatbot for my dissertation as I had recently finished my machine learning module at the time and found a strong interest in DeepLearning that I wanted to expand. I used my dissteration as an opportunity to learn more about the topic and felt that a chatbot was a suitable method for doing so. It should be noted that at the time of development, ChatGPT had yet to be released and AI was yet to have the major breakthrough that we're living with today. 
+                <br><br>
+                As with any dissertation, I had to plan and justify my process. From a technical standpoint, this meant research of models and datasets to use. After some research I decided on Tensorflow's Keras Seq2Seq implementation, a model intended for language translation that had found use as a chatbot tool at the time as translating from one language to another would follow a similar process to converting from question to answer. For my dataset I originally used the Cornell movie dialogue corpus, a collection of movie dialogue questions and answers. I had to change this during development however as I quickly realised that the dataset contained dialogue from a number of Quentin Tarantino films including Pulp Fiction. Instead I used the Stanfrod Question Answering Dataset, a collection of questions and answers based on wikipedia articles. This was less natural but also far less vulgar. 
+                <br><br>
+                As for a non technical standpoint, I interviewed and surveyed a number of fellow students to find what the chatbot could ideally provide. This helped me decide on using Facebook messenger as a medium for the chatbot and create some of the topics the chatbot would use, in a manually designed dataset to be combined with SQUAD. The full dissertation (as linked above) details the justifications and research concluded to decide all of this.
+            </p>
+            <h1 class="project-header">Development</h1>
+            <p class="project-text">
+                Once planned, development began but not smoothly. I ran in to a number of issues including hardware and data limitations. At the time, data available and the training methods used had not been refined as they are now and as you can see in the screenshots above even with the SQUAD dataset (of around 100,000 questions and answers), the chatbot struggles to produce any real conversation. Despite this, the full dissertation report details that the model is successfully running, just that at this time the project was too ambitious. 
+                <br><br>
+                The development process used followed an agile process iterating through a number of stages. The first stage was the base implementation of the chatbot itself then followed by a second stage that implemented a sentiment analysis on the text and into the model training with the intention of influencing user response by their emotions. This worked, but the implementation left a lot to be desired as while there was an impact it didnt result in natural conversation with emotional capability. The third stage focused on testing the model and it's accuracy, hoping to refine the results. The fourth and final stage implemented the chatbot into Facebook Messenger directly, a requirement identified from surveys with fellow students. Heroku was used to host the app and then the Facebook developer platform to access the API responses produced. 
+            </p>
+            <h1 class="project-header">Outcome</h1>
+            <p class="project-text">
+                While the chatbot itself didn't perform as naturally as hoped to give seemingly natural conversation and support students, the project as a whole was a massive success. It deepened my knowledge of machine learning massively and the setbacks and issues gave lots of content to write about in my dissertation. The dissertation itself earned a First as well as an award for the class of 2021 Edgehill University End of Year Showcase. 
+            </p>
+
+            <br>
+            <a href="https://github.com/Lewis-C/EHU-Chatbot-Dissertation-Script" class="project-link">Visit Github Repo...</a>
+
+
+        </div>
+    </body>
+</html> 

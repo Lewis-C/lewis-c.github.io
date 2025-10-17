@@ -175,6 +175,12 @@ Body Styling
     width: 70%;
 }
 
+.project-chatbot {
+    width: 40%;
+    justify-content: center;
+    margin: auto;
+}
+
 .project-link {
     float: right;
     background-color: var(--background-colour); 
