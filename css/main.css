@@ -54,23 +54,48 @@ body{
     flex-direction: row;
 }
 
-p {
+h1 {
+    color: var(--focus-colour);
+    font-size: 150%;
+    font-weight: 500;
+    line-height: 95%;
+    margin-bottom: 1vh;
+}
+
+h2 {
+    line-height: 75%;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+h3 {
+    color: var(--focus-colour);
+    font-size: 70%;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 50%;
+    font-weight: 500;
+}
+
+p{
     font-size: 60%;
-    font-weight: 450;
+}
+
+a {
+    color: var(--focus-colour);
+    font-weight: 600;
 }
 
 strong{
     color: var(--focus-colour);
-    font-weight: 550;
+    font-weight: 500;
 }
 
 hr {
     border: 1px solid var(--accent-colour);
     width: 30%;
-}
-
-a {
-    color: var(--focus-colour);
 }
 
 
@@ -85,19 +110,7 @@ Header Styling
 }
 
 
-#title {
-    color: var(--focus-colour);
-    font-size: 150%;
-    font-weight: 500;
-    line-height: 95%;
-        margin-bottom: 1vh;
-}
 
-#subtitle {
-    line-height: 75%;
-    font-size: 90%;
-    font-weight: 500;
-}
 
 /* Article Styling */
 
@@ -105,19 +118,6 @@ Header Styling
     justify-content: space-between ;
 }
 
-.article-title {
-    color: var(--focus-colour);
-    font-size: 60%;
-}
-
-.article-date {
-    font-size: 50%;
-    font-weight: 300;
-}
-
-.article-description   {
-    font-size: 50%;
-}
 
 .article-link {
     font-size: 50%;
