@@ -7,186 +7,45 @@
     <link rel="icon" href="img/TabLogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <body>
-        <div id="sidebar">
-            <div id="info" class="column">
-                <div>
-                    <div class="row">
-                        <img id="profile-picture" alt="Picture of me" src="img/profile.jpg">
-                        <div id="profile-header" class="column">
-                            <h1 id="profile-intro">Hi, I'm</h1>
-                            <h1 id="profile-name">Lewis Cunliffe </h1>
-                        </div>
-                    </div>
-                    <p id="profile-description">
-                        I'm currently a Data Engineer at BAE Systems with years of experience in creating data solutions. During my time, I've worked on all aspects of the data process, extracting data from a wide range of sources all the way to creating appealing visualisations. 
-                        <br><br>
-                        In my spare time, I often work on a variety of personal technical projects that cover all sorts of skills (though primarily data related). I've created this website to showcase them. Please feel free to have a look around and reach out to me if you have any questions!
-                        <br><br>
-                        <span id="skills-instructions">
-                        Select a skill below to focus on projects that cover them. Some skills dont have a project to showcase them as I've picked them up elsewhere.
-                        </span>
-                    </p>
-                    <div class="row skills">
-                        <label class="skill">
-                            <input class="skill-check" id="sql" type="checkbox"/>
-                            <span class="skill-text">SQL</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="python" type="checkbox"/>
-                            <span class="skill-text">Python</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="tensorflow" type="checkbox"/>
-                            <span class="skill-text">Tensorflow</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="selenium" type="checkbox"/>
-                            <span class="skill-text">Selenium</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="deeplearning" type="checkbox"/>
-                            <span class="skill-text">DeepLearning</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="linux" type="checkbox"/>
-                            <span class="skill-text">Linux</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="webdesign" type="checkbox"/>
-                            <span class="skill-text">Web Design</span>
-                        </label>
-                        <label class="skill">
-                            <input class="skill-check" id="javascript" type="checkbox"/>
-                            <span class="skill-text">Javascript</span>
-                        </label>
-                        
-                        
-                    </div>
-                </div>
-                <div id="contact" class="row">
-                    <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
-                    <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
-                    <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
-                    <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
-                </div>
-
-            </div>
+<body class="column">
+    <div id="header" class="row">
+        <div id="name" class="column">
+            <h2 id="subtitle">Hi, I'm</h2>
+            <h1 id="title">Lewis Cunliffe</h1>
         </div>
-        <div id="main">     
-            <div id="projects" class="row">
-                <div class="column project python selenium">
-                    <div class="column project-body">
-                        <h1 class="project-title">KGATLW Scraper</h1>
-                        <p class="project-description">A script to scrape the top voted King Gizzard performances and build a playlist for each song found.</p>
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">Python</span>
-                            <span class="project-skill">Selenium</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">November 2025</p>
-                            <a href="gizzard.html" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column project sql powerbi python">
-                    <div class="column project-body">
-                        <h1 class="project-title">Music ETL / Dashboard</h1>
-                        <p class="project-description">A script to extract data from my Spotify playlists and store in a star schema. Originally intended to find albums that I should buy as vinyls, but then became a dashboard to learn PowerBI. </p>
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">SQL</span>
-                            <span class="project-skill">PowerBI</span>
-                            <span class="project-skill">Python</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">August 2025</p>
-                            <a href="spotify.html" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column project webdesign javascript">
-                    <div class="column project-body">
-                        <h1 class="project-title">This Website</h1>
-                        <p class="project-description">The site you're on now! After putting a handful of projects together, I wanted a place to write about my process and made this site. </p>
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">Web Design</span>
-                            <span class="project-skill">Javascript</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">July 2025</p>
-                            <a href="website" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="column project webdesign javascript python linux sql">
-                    <div class="column project-body">
-                        <h1 class="project-title">Desk Kiosk</h1>
-                        <p class="project-description">Another attempt at a kiosk, this time for my own desk and with an improved approach using Flask, SQLite and Websockets.</p>
-
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">Python</span>
-                            <span class="project-skill">SQL</span>
-                            <span class="project-skill">Linux</span>
-                            <span class="project-skill">Web Design</span>
-                            <span class="project-skill">Javascript</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">September 2024</p>
-                            <a href="desk" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="column project webdesign javascript python linux">
-                    <div class="column project-body">
-                        <h1 class="project-title">Van Kiosk</h1>
-                        <p class="project-description">A small kiosk screen for a camper-van. The screen displays a number of metrics from a variety of devices, to show useful info about the van's status.</p>
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">Python</span>
-                            <span class="project-skill">Linux</span>
-                            <span class="project-skill">Web Design</span>
-                            <span class="project-skill">Javascript</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">July 2023</p>
-                            <a href="van" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-
-                </div>
-                    <div class="column project python tensorflow deeplearning">
-                    <div class="column project-body">
-                        <h1 class="project-title">Dissertation Chatbot</h1>
-                        <p class="project-description">My dissertation project to create a support Chatbot for my university using my own implementation of Tensorflow's Seq2Seq deeplearning model.</p>
-                    </div>
-                    <div class="column">
-                        <div class="row project-skills">
-                            <span class="project-skill">Python</span>
-                            <span class="project-skill">Tensorflow</span>
-                            <span class="project-skill">DeepLearning</span>
-                        </div>
-                        <div class="row project-footer">
-                            <p class="project-date">May 2021</p>
-                            <a href="dissertation" class="project-link">Read More...</a>
-                        </div>
-                    </div>
-
-                </div>
-                
-            </div>
+    </div>
+    <div id="body" class="column">
+        <div class="article">
+            <p id="intro-text" class="article-description">
+                I'm currently a <strong>Data Engineer</strong> at BAE Systems with years of experience in creating data solutions. During my time, I've worked on all aspects of the data process, extracting data from a wide range of sources all the way to creating appealing visualisations and picked up skills with tools such as <strong>SQL</strong> (specifically <strong>SQL Server</strong>), <strong>SSIS</strong>, <strong>Tableau</strong>, <strong>IBM Cognos</strong>, <strong>Tibco Data Virtualisation</strong> and <strong>C#</strong>.
+                <br><br>
+                In my spare time, I often work on a variety of personal technical projects that cover all sorts of skills (though primarily data related). I've created this website to showcase them. Please feel free to have a look around and reach out to me if you have any questions.
+            </p>    
         </div>
-
-        <script src="js/skills_highlight.js"></script> 
-    </body>
-
+        <div class="article">
+            <hr>
+            <div class="row article-header">
+                <h3 class="article-title">
+                    King Gizzard Track Scraper
+                </h3>
+                <h4 class="article-date">
+                    November 2025
+                </h4>
+            </div>
+            <p class="article-description">
+                Simple <strong>Python</strong> script to scrape the top voted live performances of the band King Gizzard and the Lizard Wizard from a community website using <strong>Selenium</strong> and then build a Youtube playlist using Google's API.
+            </p>
+            <a class="article-link" href="test.html">Read More</a>    
+        </div>
+    </div>
+    <div id="footer" class="column">
+        <p class="contact row">
+            <a class="contact-link" href="mailto:lc.cunliffe@outlook.com">lc.cunliffe@outlook.com</a>
+            /
+            <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/">LinkedIn</a>
+            /
+            <a class="contact-link" href="https://github.com/Lewis-C">Github</a>
+        </p>
+    </div>
+</body>
 </html> 
