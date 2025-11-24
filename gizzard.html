@@ -2,44 +2,45 @@
 <html>
 
 <head>
-    <title>Lewis Cunliffe | Gizzard Scraper</title>
+    <title>Lewis Cunliffe | KGATLW Scraper</title>
     <link rel="stylesheet" href="css/project.css">
     <link rel="icon" href="img/TabLogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <body class="column">
-        <div id="header" class="row">
-            <h1 id="project-title">King Gizzard Web Scraper</h1>
-            <div id="contact" class="row">
-                <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
-                <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
-                <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
-                <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
-            </div>
+<body class="column">
+    <div id="header" class="row">
+        <div id="name" class="column">
+            <h1 id="title">King Gizzard Performance Scraper</h1>
         </div>
-        <div id="body">
-            <div class="row">
-                <div class="row project-skills">
-                    <span class="project-skill">Python</span>
-                    <span class="project-skill">Selenium</span>
-                </div>
-                <h1 class="project-date">Novemeber 2021</h1>
-            </div>
-            <h1 class="project-header">What is it?</h1>
-            <p  class="project-text">
-                A quick script to scrape the top performances for each song by the band King Gizzard and the Lizard Wizard (as voted on <a href="https://livegizzrankings.com/songs">here</a>) and then put them into a Youtube Music playlist. 
-            </p>
-            <h1 class="project-header">How does it work?</h1>
-            <p  class="project-text">
-                The script uses a Selenium instance to browse the page. I used selenium as the page itself is dynamic, loading content from a database closed off for public use. This allows the page to load in fully before retrieving each song's top performance.
-                <br><br>
-                Once the song name and peformance name are retrieved, the python package YTMusic is used to search Youtube for each. This retrieves a set of songs based on the info searched, which in most cases worked directly with the first result however the script uses some checks to ensure the results are correct. The search results are then used to find the Youtube Music specific ID for each song and add to a playlist. 
-                <br><br>
-                I don't personally use Youtube Music but unfortunately Apple Music's API is restricted to developer accounts and Deezer's API is off limits. The band has recently took all their music off Spotify as well, so that is also not an option. The script produced great results, with only 5 songs missing and all of which due to youtube musics library being outdated compared to the sites use of Bandcamp as a source.
-            </p>
-            <a href="https://github.com/Lewis-C/King-Gizzard-Ranking-Scraper" class="project-link">Visit Github Repo...</a>
+    </div>
+    <div id="body">
 
-
+        <p class="article-text">
+            A simple script to scrape the top performances for each song by the band King Gizzard and the Lizard Wizard (as voted on <a href="https://livegizzrankings.com/songs">here</a>) and then put them into a Youtube Music playlist. 
+        </p> 
+        <hr> 
+        <h2 class="article-subheading">How does it work?</h2>
+        <p class="article-text">
+            The script uses a Selenium instance to browse the page. I used selenium as the page itself is dynamic, loading content from a database closed off for public use. This allows the page to load in fully before retrieving each song's top performance.
+            <br><br>
+            Once the song name and peformance name are retrieved, the python package YTMusic is used to search Youtube for each. This retrieves a set of songs based on the info searched, which in most cases worked directly with the first result however the script uses some checks to ensure the results are correct. The search results are then used to find the Youtube Music specific ID for each song and add to a playlist. 
+            <br><br>
+            I don't personally use Youtube Music but unfortunately Apple Music's API is restricted to developer accounts and Deezer's API is off limits. The band has recently took all their music off Spotify as well, so that is also not an option. The script produced great results, with only 5 songs missing and all of which due to youtube musics library being outdated compared to the sites use of Bandcamp as a source.        </p>
+        </p>
+        <div class="row article-info">
+            <h4 class="article-date">November 2025</h4>
+            <p><a href="index.html" class="article-link">Visit Github Repo...</a></p>
         </div>
+
+    </div>
+    <div id="footer" class="column">
+        <p class="contact row">
+            <a class="contact-link" href="mailto:lc.cunliffe@outlook.com">lc.cunliffe@outlook.com</a>
+            /
+            <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/">LinkedIn</a>
+            /
+            <a class="contact-link" href="https://github.com/Lewis-C">Github</a>
+        </p>
+    </div>
     </body>
 </html> 
