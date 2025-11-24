@@ -16,14 +16,14 @@
     <div id="body">
 
         <p class="article-text">
-            King Gizzard and the Lizard Wizard have a huge library of songs, and an ever bigger library of live performances which can make things complicated if trying to listen to their best works. Another fan created a community site called <a href="https://livegizzrankings.com/songs">Live Gizz Rankings</a> to help deal with this, allowing fans to vote on their favourites and display them on the site. However, this was still not simple enough for myself so I created a simple <strong>Python</strong> script with the library <strong>Selenium</strong> to scrape the top performance from each song and add to a Youtube Music playlist. 
+            King Gizzard and the Lizard Wizard have a huge library of songs, and an ever bigger library of live performances which can make things complicated if trying to listen to their best works. Another fan created a community site called <a href="https://livegizzrankings.com/songs">Live Gizz Rankings</a> to help deal with this, allowing fans to vote on their favourites and display them on the site. However, this was still not simple enough for myself so I created a simple <strong>Python</strong> script with the library <strong>Selenium</strong> to scrape the top performance from each song and add it to a Youtube Music playlist. 
         </p> 
         <hr> 
         <h2 class="article-subheading">How does it work?</h2>
         <p class="article-text">
             The script uses a <strong>Selenium</strong> instance to browse the page. I used selenium as the page itself is dynamic, loading content from a database closed off for public use. This allows the page to load in fully before retrieving each song's top performance.
             <br><br>
-            Once the song name and peformance name are retrieved, the <strong>Python</strong> package YTMusic is used to search Youtube for each. This retrieves a set of songs based on the info searched, which in most cases worked directly with the first result however the script uses some checks to ensure the results are correct. The search results are then used to find the Youtube Music specific ID for each song and add to a playlist. 
+            Once the song name and performance name are retrieved, the <strong>Python</strong> package YTMusic is used to search Youtube for each. This retrieves a set of songs based on the info searched, which in most cases worked directly with the first result however the script uses some checks to ensure the results are correct. The search results are then used to find the Youtube Music specific ID for each song and add to a playlist. 
             <br><br>
             I don't personally use Youtube Music but unfortunately Apple Music's API is restricted to developer accounts and Deezer's API is off limits. The band has recently took all their music off Spotify as well, so that is also not an option. The script produced great results, with only 5 songs missing and all of which due to Youtube Music's library being outdated compared to the site which used Bandcamp as it's source.        </p>
         </p>
