@@ -7,52 +7,54 @@
     <link rel="icon" href="img/TabLogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <body class="column">
-        <div id="header" class="row">
-            <h1 id="project-title">Desk Kiosk</h1>
-            <div id="contact" class="row">
-                <a class="contact-link" href="mailto:lc.cunliffe@outlook.com"><img class="contact-icon" alt="Email Icon and link" src="img/email.svg"></a>
-                <a class="contact-link" href="Lewis_Cunliffe_CV.pdf"><img class="contact-icon" alt="CV Icon and link" src="img/cv.svg"></a>
-                <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/"><img class="contact-icon" alt="linkedin Icon and link" src="img/linkedin.svg"></a>
-                <a class="contact-link" href="https://github.com/Lewis-C"><img class="contact-icon" alt="github Icon and link" src="img/github.svg"></a>
-            </div>
+<body class="column">
+    <div id="header" class="row">
+        <div id="name" class="column">
+            <h1 id="title">Desk Kiosk</h1>
         </div>
-        <div id="body">
-            <div class="row">
-                <div class="row project-skills">
-                    <span class="project-skill">SQL</span>
-                    <span class="project-skill">Python</span>
-                    <span class="project-skill">Linux</span>
-                    <span class="project-skill">Web Design</span>
-                    <span class="project-skill">Javascript</span>
-                </div>
-                <h1 class="project-date">November 2024</h1>
+    </div>
+    <div id="body">
+        <p>
+            A kiosk device used to display useful information for an office desk, specifically my own at home  weather, events, Liverpool FC scores and even what song I am currently listening to on Spotify. The device uses <strong>Python</strong> scripts to retrieve data needed, store in a <strong>MySQL</strong> database then host a dashboard using <strong>Flask</strong>. The device itself uses a <strong>Linux Debian</strong> distribution to manage the running of these scripts and the Chromium browser used to access the dashboard.             
+            <div class="row article-images">
+                <img class="article-image" alt="" src="img/project_images/desk1.PNG">
+                <img class="article-image" alt="" src="img/project_images/desk2.PNG">
             </div>
-            <h1 class="project-header">What is it?</h1>
-            <p  class="project-text">
-                Another kiosk device used to display handy info but for an office, specifically my own at home. The screen shows info such as weather, events, Liverpool FC scores and even what song I am currently listening to on Spotify. After working on the Van Kiosk I realised that I could do with something similar for myself and also that I could make things far more efficient.
-            </p>
-            <div class="row">
-                <img class="project-image" alt="Project Image" src="img/project_images/desk.jpg">
-                <img class="project-image" alt="Project Image" src="img/project_images/desk2.jpg">
-            </div>
-            <h1 class="project-header">How does it work?</h1>
-            <p class="project-text">
-                The kiosk itself is a website locally hosted on a Raspberry Pi 3 with the device hardcoded to boot into a Chromium window displaying the website and locking into it. Instead of the site using Javascript scripts to display the values of the data, the site is hosted using Flask, a lightweight Python webapp hosting framework that is very suitable for this usecase (and retroactively would have been more useful for the van kiosk as well). With Flask, the data recorded can be displayed Pythonically. To do this, and store the data itself, I used a SQLite database instead of JSON files. The SQLite Database is itself populated by a series of Python scripts. 
-                <br><br>
-                The data for this kiosk was far more straightforward to retrieve. All of the values required were available online instead of using hardware and there was no need to account for potential movement
-                <li class="project-list"> Time and date as shown in the top left were taken directly from the device itself</li>
-                <li class="project-list"> The hourly weather for the current day and the daily weather for the week below, sourced from Open-Meteo</li>
-                <li class="project-list"> Calendar events taken directly from the Google Calendar API, linked with my own account and shown above the hourly weather and as part of the upcoming week</li>
-                <li class="project-list"> Currently listening on Spotify, taken using Spotify's own API. Unlike the others, this data is taken directly from the API and not stored anywhere locally to avoid the performance loss from regularly having to read and write. Instead a direct connection to the Spotify API is made that polls the currently listening endpoint every three seconds with a python script. Using WebSockets the results of the script are then communicated to the webserver and live updated upon any changes. This allows the display to change as soon as a song plays or changes.</li>
-                <li class="project-list"> When no songs are being listened to, a display of BAE's stock and flight tracker for the office using Yahoo Finance's API and the ADSDB API</li>
-                <li class="project-list"> Liverpool FC's standing in both the Premier League and the Champions League (note that despite what the screenshot says, Liverpool hadnt been knocked out at this point and will not be, the code to display this didnt account for game not yet being drawn) as well their most recent and upcoming matches. This info is sourced from football-data.org's api's free package</li>
-                <li class="project-list"> Finally at the bottom, a BBC News style ticker with headlines sourced from BBC's UK and Global news RSS feeds</li>
-                <br>
-                These scripts are scheduled to run either every 15 minutes (news, weather and events) or every hour (stocks, flights and LFC). As well as storing the data, the database also keeps track of runs using a logging table that records each script runtimes as well as the record counts and any error messages that occur.
-            </p>
-            <br>
-            <a href="https://github.com/Lewis-C/Desk-Kiosk" class="project-link">Visit Github Repo...</a>
+            <hr> 
+        </p>
+        <p>
+            The Kiosk (as shown above) retrieves data from a variety of sources and extracts them on schedules dependent on the source. The majority of the scripts access API’s providing the needed data then write to a specific <strong>MySQL</strong> table. 
+            <ul>
+                <li>The hourly weather for the current day and the daily weather for the week below, sourced from Open-Meteo.</li>
+                <li>Calendar events taken directly from the Google Calendar API, linked with my own account and shown above the hourly weather and as part of the upcoming week.</li>
+                <li>When no songs are being listened to, a display of BAE's stock and flight tracker for the office using Yahoo Finance's API and the ADSDB API.</li>
+                <li>Liverpool FC's standing in both the Premier League and the Champions League (note that despite what the screenshot says, Liverpool has not been knocked out at this point and will not be, the code to display this did not account for games not yet being drawn) as well their most recent and upcoming matches sourced from football-data.org's api's free package.</li>
+                <li>BBC News style ticker with headlines sourced from BBC's UK and Global news RSS feeds</li>
+            </ul>
+            These sources are extracted either every 15 minutes (news, weather and events) or every hour (stocks, flights and LFC). As well as storing the data, the database also keeps track of runs using a logging table that records each script runtime as well as the record counts and any error messages that occur.
+            <hr>
+        </p> 
+        <p>
+            Unlike the other sources, the indicator for Spotify’s current tracks is taken directly from the API and not stored in a database. As the function of this data needs regular live access, performance loss from regularly having to read and write would be a major issue. Instead a direct connection to the Spotify API is made that polls the currently listening endpoint every three seconds with a <strong>Python</strong> script. Using <strong>Flask WebSockets</strong> the results of the script are then communicated to the webserver and live updated upon any changes. This allows the display to change as soon as a song plays or changes rather than waiting for a scheduled refresh.
+            <hr>
+        </p>
+        <p>
+            The kiosk itself is a website locally hosted on a Raspberry Pi 3 with the device hardcoded to boot into a Chromium window displaying the website and locking into it. Instead of the site using Javascript scripts to display the values of the data, the site is hosted using <strong>Flask</strong>, a lightweight <strong>Python</strong> web-app hosting framework that is appropriate for this use case (and retroactively would have been more useful for the van kiosk as well). With <strong>Flask</strong>, the data stored in <strong>SQLite</strong> can be accessed with ease and Pythonically, making the design and structure of the kiosk incredibly straightforward.
+            <hr>
+        </p>
+        <div class="row article-info">
+            <h4 class="article-date">November 2024</h4>
+            <p><a href="https://github.com/Lewis-C/Desk-Kiosk" class="article-link">Visit Github Repo...</a></p>
         </div>
+    </div>
+    <div id="footer" class="column">
+        <p class="contact row">
+            <a class="contact-link" href="mailto:lc.cunliffe@outlook.com">lc.cunliffe@outlook.com</a>
+            /
+            <a class="contact-link" href="https://www.linkedin.com/in/lewiscunliffe/">LinkedIn</a>
+            /
+            <a class="contact-link" href="https://github.com/Lewis-C">Github</a>
+        </p>
+    </div>
     </body>
 </html> 

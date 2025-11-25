@@ -14,18 +14,16 @@
         </div>
     </div>
     <div id="body">
-
-        <p class="article-text">
-            King Gizzard and the Lizard Wizard have a huge library of songs, and an ever bigger library of live performances which can make things complicated if trying to listen to their best works. Another fan created a community site called <a href="https://livegizzrankings.com/songs">Live Gizz Rankings</a> to help deal with this, allowing fans to vote on their favourites and display them on the site. However, this was still not simple enough for myself so I created a simple <strong>Python</strong> script with the library <strong>Selenium</strong> to scrape the top performance from each song and add it to a Youtube Music playlist. 
+        <p>
+            A <strong>Python</strong> script that retrieves the highest voted performance from each song by the band King Gizzard and the Lizard Wizard and then builds a Youtube Music playlist automatically, with each of the songs.
+            <hr> 
+        </p>
+        <p>
+            The band King Gizzard and the Lizard Wizard has a huge library, and an even bigger library of live performances. Listening to all of them to find the best would take days. The fan site <a href="https://livegizzrankings.com/songs">Live Gizz Rankings</a> helpfully provides community curation of many performances of the band, but no playlist of the top tracks and no access to the underlying data (as of writing this). I wanted to listen to the best tracks but didn't want to manually copy and paste each track into a playlist, so instead I opted to scrape the site's contents using <strong>Selenium</strong> (to avoid issues caused by dynamic data loading). This successfully retrieved each song’s name and the performance voted best by the community. 
+            <hr>
         </p> 
-        <hr> 
-        <h2 class="article-subheading">How does it work?</h2>
-        <p class="article-text">
-            The script uses a <strong>Selenium</strong> instance to browse the page. I used selenium as the page itself is dynamic, loading content from a database closed off for public use. This allows the page to load in fully before retrieving each song's top performance.
-            <br><br>
-            Once the song name and performance name are retrieved, the <strong>Python</strong> package YTMusic is used to search Youtube for each. This retrieves a set of songs based on the info searched, which in most cases worked directly with the first result however the script uses some checks to ensure the results are correct. The search results are then used to find the Youtube Music specific ID for each song and add to a playlist. 
-            <br><br>
-            I don't personally use Youtube Music but unfortunately Apple Music's API is restricted to developer accounts and Deezer's API is off limits. The band has recently took all their music off Spotify as well, so that is also not an option. The script produced great results, with only 5 songs missing and all of which due to Youtube Music's library being outdated compared to the site which used Bandcamp as it's source.        </p>
+        <p>
+            Once retrieved, the Youtube API is then called with a request searching for each song’s unique ID from the details retrieved. While in almost all cases the search produced matching top results, extra precautions have been taken in the script to iterate through all the search results to ensure a direct match. As well, the script produces a log file with any tracks that had been found to be completely missing. As of writing, this produced only five issues, where all are due to a mismatched library between Youtube and Bandcamp (the source the voting site uses). 
         </p>
         <div class="row article-info">
             <h4 class="article-date">November 2025</h4>

@@ -14,18 +14,24 @@
         </div>
     </div>
     <div id="body">
-        <h2 class="article-subheading">What is it?</h1>
-        <p class="article-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod mauris mollis fermentum tincidunt. Ut et luctus diam. Etiam vel enim id ligula euismod lobortis non sit amet lacus. Morbi sagittis porttitor tristique. Vestibulum interdum gravida magna. Vivamus imperdiet tincidunt orci quis tincidunt. Nullam laoreet iaculis eros, non porta neque maximus non. Sed volutpat id quam vel interdum. Aenean magna neque, porttitor eget eleifend sit amet, maximus nec justo. Ut suscipit lorem nec quam scelerisque interdum. Nam at velit ex. 
-        </p>  
-        <h2 class="article-subheading">How does it work?</h1>
-        <p class="article-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod mauris mollis fermentum tincidunt. Ut et luctus diam. Etiam vel enim id ligula euismod lobortis non sit amet lacus. Morbi sagittis porttitor tristique. Vestibulum interdum gravida magna. Vivamus imperdiet tincidunt orci quis tincidunt. Nullam laoreet iaculis eros, non porta neque maximus non. Sed volutpat id quam vel interdum. Aenean magna neque, porttitor eget eleifend sit amet, maximus nec justo. Ut suscipit lorem nec quam scelerisque interdum. Nam at velit ex. 
+        <p>
+            A <strong>Python</strong> script that retrieves the highest voted performance from each song by the band King Gizzard and the Lizard Wizard and then builds a Youtube Music playlist automatically, with each of the songs.
+            <hr> 
+        </p>
+        <p>
+            The band King Gizzard and the Lizard Wizard has a huge library, and an even bigger library of live performances. Listening to all of them to find the best would take days. The fan site <a href="https://livegizzrankings.com/songs">Live Gizz Rankings</a> helpfully provides community curation of many performances of the band, but no playlist of the top tracks and no access to the underlying data (as of writing this). I wanted to listen to the best tracks but didn't want to manually copy and paste each track into a playlist, so instead I opted to scrape the site's contents using <strong>Selenium</strong> (to avoid issues caused by dynamic data loading). This successfully retrieved each song’s name and the performance voted best by the community. 
+            <hr>
+        </p> 
+        <p>
+            Once retrieved, the Youtube API is then called with a request searching for each song’s unique ID from the details retrieved. While in almost all cases the search produced matching top results, extra precautions have been taken in the script to iterate through all the search results to ensure a direct match. As well, the script produces a log file with any tracks that had been found to be completely missing. As of writing, this produced only five issues, where all are due to a mismatched library between Youtube and Bandcamp (the source the voting site uses). 
         </p>
         <div class="row article-images">
             <img class="article-image" alt="" src="img/project_images/website.PNG">
         </div>
-        <a href="index.html" class="article-link">Visit Github Repo...</a>
+        <div class="row article-info">
+            <h4 class="article-date">November 2025</h4>
+            <p><a href="https://github.com/Lewis-C/King-Gizzard-Ranking-Scraper" class="article-link">Visit Github Repo...</a></p>
+        </div>
     </div>
     <div id="footer" class="column">
         <p class="contact row">
