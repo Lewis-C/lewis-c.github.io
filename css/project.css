@@ -146,6 +146,16 @@ Header Styling
     border-radius: 10px;
 }
 
+.article-image-column {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    border: 2px solid var(--focus-colour);
+    border-radius: 10px;
+}
+
 .article-link {
     display: block;
     text-align: right;
