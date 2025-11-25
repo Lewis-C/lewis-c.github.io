@@ -136,13 +136,13 @@ Header Styling
     justify-content: space-around;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    width: 100%;
 }
 
-
 .article-image {
+    width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    width: 90%;
     border: 2px solid var(--focus-colour);
     border-radius: 10px;
 }
@@ -152,7 +152,8 @@ Header Styling
     margin-bottom: 2%;
     margin-left: 10%;
     margin-right: 10%;
-    width: 80%;
+    width: 100%;
+    object-fit: contain;
     border: 2px solid var(--focus-colour);
     border-radius: 10px;
 }
@@ -180,14 +181,18 @@ Header Styling
 /* Media Queries */
 
 @media screen and (max-width: 600px) {
-  body {
-    max-width: 100vw;
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+    body {
+        max-width: 100vw;
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-    .chatbot {
+    .dynamic-images {
+        flex-direction: column;
+    }
+
+    .dynamic-image {
         margin-top: 2%;
         margin-bottom: 2%;
         margin-left: 10%;
@@ -195,14 +200,6 @@ Header Styling
         width: 80%;
         border: 2px solid var(--focus-colour);
         border-radius: 10px;
-    }
-
-    .chatbot-images{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin-top: 1vh;
-        margin-bottom: 1vh;
     }
 }
 
