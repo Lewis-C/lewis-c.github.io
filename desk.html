@@ -17,13 +17,14 @@
         <p>
             A kiosk device used to display useful information for an office desk, specifically my own at home  weather, events, Liverpool FC scores and even what song I am currently listening to on Spotify. The device uses <strong>Python</strong> scripts to retrieve data needed, store in a <strong>MySQL</strong> database then host a dashboard using <strong>Flask</strong>. The device itself uses a <strong>Linux Debian</strong> distribution to manage the running of these scripts and the Chromium browser used to access the dashboard.             
             <div class="row article-images">
-                <img class="article-image" alt="" src="img/project_images/desk1.PNG">
-                <img class="article-image" alt="" src="img/project_images/desk2.PNG">
+                <img class="article-image" alt="" src="img/project_images/desk.jpg">
+                <img class="article-image" alt="" src="img/project_images/desk2.jpg">
             </div>
             <hr> 
         </p>
         <p>
             The Kiosk (as shown above) retrieves data from a variety of sources and extracts them on schedules dependent on the source. The majority of the scripts access API’s providing the needed data then write to a specific <strong>MySQL</strong> table. 
+            <br>
             <ul>
                 <li>The hourly weather for the current day and the daily weather for the week below, sourced from Open-Meteo.</li>
                 <li>Calendar events taken directly from the Google Calendar API, linked with my own account and shown above the hourly weather and as part of the upcoming week.</li>
@@ -31,6 +32,9 @@
                 <li>Liverpool FC's standing in both the Premier League and the Champions League (note that despite what the screenshot says, Liverpool has not been knocked out at this point and will not be, the code to display this did not account for games not yet being drawn) as well their most recent and upcoming matches sourced from football-data.org's api's free package.</li>
                 <li>BBC News style ticker with headlines sourced from BBC's UK and Global news RSS feeds</li>
             </ul>
+        </p>
+        <p>
+            <br>
             These sources are extracted either every 15 minutes (news, weather and events) or every hour (stocks, flights and LFC). As well as storing the data, the database also keeps track of runs using a logging table that records each script runtime as well as the record counts and any error messages that occur.
             <hr>
         </p> 

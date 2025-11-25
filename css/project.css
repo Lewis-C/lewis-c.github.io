@@ -84,6 +84,8 @@ p{
     font-size: 60%;
 }
 
+
+
 a {
     color: var(--focus-colour);
     font-weight: 600;
@@ -99,6 +101,14 @@ hr {
     width: 30%;
 }
 
+ul {
+    list-style-type: square;
+    padding-left: 30px;
+}
+
+li{
+    font-size: 60%;
+}
 
 /*
 Header Styling

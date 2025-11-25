@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Lewis Cunliffe | Portfolio Website</title>
+    <title>Lewis Cunliffe | Van Kiosk</title>
     <link rel="stylesheet" href="css/project.css">
     <link rel="icon" href="img/TabLogo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 <body class="column">
     <div id="header" class="row">
         <div id="name" class="column">
-            <h1 id="title">Project Name</h1>
+            <h1 id="title">Van Kiosk</h1>
         </div>
     </div>
     <div id="body">
@@ -22,21 +22,24 @@
             <hr> 
         </p>
         <p>
-            The Kiosk (as shown above) uses a number of devices and approaches to retrieve the information needed for displays useful for a van.            
-            <br><br>
             Tilt (as shown as pitch and roll) is recorded using an Adafruit MPU-6050 connected to the Pi directly. A <strong>Python</strong> script reads the tilt values from the device’s bus and converts the bits to degrees. These values are then written into a json file on an endless loop ran as a daemon, which is in turn read by the webserver by a <strong>Javascript</strong> script. This updates automatically, adjusting not only the value but also the dial and icon’s rotation. The kiosk also includes a script to zero the sensor, intended for use on what should be considered flat ground.
-            <br><br>
-            Butane and Water is recorded using a Wii Fit board. After looking into using tank sensors, we found that they were far too expensive so instead decided to calculate the contents via mass instead. When researching scales with <strong>Python</strong> and Raspberry Pi support, Wii Fit boards were a regular answer due to their bluetooth connective and device readability (intended for use with a Wii). As well, Wii Fit boards can be found cheap gathering dust at most charity shops. More specific to our use case was the feature that Wii Fit boards measured mass in four sections, instead of a single scale. This made using one board to measure both butane and water a possibility. Despite all the great features of Wii Fit boards, they did come with a major issue due to being intended for human use, they had a minimum weight. Below are a couple of pictures taken when testing the device using two large books (1838g each) to act as a base and cups of water to simulate the tanks
+            <hr>
+        </p>
+        <p>
+            Butane and Water is recorded using a Wii Fit board. After looking into using tank sensors, we found that they were far too expensive so instead decided to calculate the contents via mass instead. When researching scales with <strong>Python</strong> and Raspberry Pi support, Wii Fit boards were a regular answer due to their bluetooth connective and device readability (intended for use with a Wii). <br><br> Wii Fit boards can be found cheap gathering dust at most charity shops. More specific to our use case was the feature that Wii Fit boards measured mass in four sections, instead of a single scale. This made using one board to measure both butane and water a possibility. Despite all the great features of Wii Fit boards, they did come with a major issue due to being intended for human use, they had a minimum weight. Below are a couple of pictures taken when testing the device using two large books (1838g each) to act as a base and cups of water to simulate the tanks
             <div class="row article-images">
                 <img class="article-image" alt="" src="img/project_images/vanscale.png">
             </div>
-            <br><br>
-            Weather Forecast is extracted from the Open-Meteo API every 30 minutes. However, as the camper van is intended to be mobile, the current location needed to be recorded. Using a DFRobot TEL0138 GPS Receiver, the <strong>Python</strong> script would read the values of the longitude and latitude then send them to the api as parameters. This wasn't as reliable as I had hoped, so as a backup solution whenever the GPS wasn't working the IP being used by the device would be used to gain a location and be converted into coordinates. Despite this being much more inaccurate, it would reliably work as long as the van maintained internet connection.
             <hr>
-        </p> 
+        </p>
+        <p>
+            Weather Forecast is extracted from the Open-Meteo API every 30 minutes. However, as the camper van is intended to be mobile, the current location needed to be recorded. Using a DFRobot TEL0138 GPS Receiver, the <strong>Python</strong> script would read the values of the longitude and latitude then send them to the api as parameters. This wasn't as reliable as I had hoped, so as a backup solution whenever the GPS wasn't working the IP being used by the device would be used to gain a location and be converted into coordinates. Despite this being much more inaccurate, it would reliably work as long as the van maintained internet connection.
+            <hr>            
+        </p>
         <p>
             The kiosk itself is a website locally hosted on a Raspberry Pi 3 with the device hardcoded to boot into a Chromium window displaying the website and locking into it. The website uses <strong>Javascript</strong> to display the data extracted from JSON files recorded by the aforementioned <strong>Python</strong> scripts reading the values from different devices.        
         </p>
+        <hr>
         <div class="row article-info">
             <h4 class="article-date">November 2025</h4>
             <p><a href="https://github.com/Lewis-C/Van-Kiosk" class="article-link">Visit Github Repo...</a></p>
